@@ -11,7 +11,7 @@ class Template():
             self.url = url
         self.colour = colour
         self.template = cv2.imread(self.url)
-        if self.template == None:
+        if self.template is None:
             raise RuntimeError("Template not found")
         self.threshold = threshold
         self.grayScale = setGrayScale
