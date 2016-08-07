@@ -10,12 +10,18 @@ Well No need to manually go through thousands of slides. Either use the python m
 * OpenCV
 * ...
 
+## Setting up
+
+```
+$ git clone https://github.com/SeaifanAladdin/CBRSearcher.git
+$ cd CBRSearcher
+```
+
 ## Usage
 ###Command Line Usage
 
 Example
 ```
-$ cd CBRSearcher
 $ python CBRSearcher.py ./someLocalDirectory/ -a "albumName" -t legion -t ./CBRImageSearcher/templates/ballista_logo.jpeg  4400000. -s false -w ./matches/ -d true
 ```
 
