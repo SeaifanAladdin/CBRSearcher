@@ -85,14 +85,15 @@ class CBRAlbum():
             s.findMatches(showMatches,saveMatchesTo)
 	    
     def __iter__(self):
-	self.__currPos=len(self.slides)
-    	return self
+        self.__currPos=0
+        return self
     def next(self):
-        if self.__currPos <= 0:
+        if self.__currPos >= len(self.slides):
             raise StopIteration
         else:
-            self.__currPos -= 1
-            return self.slides[self.__currPos]
+            s = self.slides[self.__currPos]
+            self.__currPos += 1
+            return s
 
     def __str__(self):
         return self.name.split("The Official /r/Civ 60+ Civ Battle Royale! | ")[-1]
